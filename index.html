@@ -34,7 +34,7 @@
         <button id="no" type="button" class="btn btn-info btn-lg"></button>
       </div>
     </div>
-    <audio src="./sound/sound.mp3" autoplay id="myAudio"></audio>
+    <audio id="myAudio" src="sound/sound.mp3" autoplay></audio>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -49,9 +49,28 @@
     <script>
       function playMusic() {
           var audio = document.getElementById("myAudio");
-          audio.play();
+          if (audio) {
+              audio.play();
+          } else {
+              console.error("Audio element not found.");
+          }
       }
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function playMusic() {
+            var audio = document.getElementById("myAudio");
+            if (audio) {
+                audio.play();
+            } else {
+                console.error("Audio element not found.");
+            }
+        }
+
+        // Call playMusic when the DOM is fully loaded
+        playMusic();
+    });
+</script>  
   </body>
   
 </html>

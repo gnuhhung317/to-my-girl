@@ -17,6 +17,7 @@ function init(){
     $('#desc').text(CONFIG.desc)
     $('#yes').text(CONFIG.btnYes)
     $('#no').text(CONFIG.btnNo)
+    
 }
 
 function firstQuestion(){
