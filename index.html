@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href=" https://fonts.googleapis.com/css?family=Pacifico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body onload="playMusic()">
     <div class="wrapper">
       <!-- Preloader -->
     <div id="preloader">
@@ -34,7 +34,7 @@
         <button id="no" type="button" class="btn btn-info btn-lg"></button>
       </div>
     </div>
-    <audio src="/sound/sound.mp3" autoplay></audio>
+    <audio src="./sound/sound.mp3" autoplay></audio>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -46,6 +46,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="./config.js"></script>
     <script src="./js/main.js"></script>
-
+    <script>
+      function playMusic() {
+          var audio = document.getElementById("myAudio");
+          audio.play();
+      }
+  </script>
   </body>
+  
 </html>

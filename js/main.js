@@ -10,7 +10,9 @@ $(document).ready(function() {
     }, 600);
 })
 
+
 function init(){
+    
     $('#title').text(CONFIG.title)
     $('#desc').text(CONFIG.desc)
     $('#yes').text(CONFIG.btnYes)
